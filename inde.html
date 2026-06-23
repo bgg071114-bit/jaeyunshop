@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RE:JAEYUN</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- 헤더 -->
+
+<header class="header">
+
+    <div class="logo">
+        JAEYUN
+    </div>
+
+    <nav>
+        <a href="#status">서비스</a>
+        <a href="#price">가격</a>
+        <a href="#review">후기</a>
+        <a href="#contact">문의</a>
+    </nav>
+
+</header>
+
+<!-- 메인 -->
+
+<section class="hero">
+
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+
+        <span class="sub-title">
+            PREMIUM SERVICE
+        </span>
+
+        <h1>
+            NEW AGE - JAEYUN
+        </h1>
+
+        <p>
+            클랜미네랄 / 대리<br>
+            종합 대리 서비스 <br><br>
+            24시간 언제든 문의 해주세요<br>
+            아래 가격표 외 다른 대리도 진행합니다.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#">
+                클랜 미네랄
+            </a>
+
+            <a href="#">
+                대리 서비스
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 서비스 현황 -->
+ 
+
+<section id="status" class="status-section">
+
+    <h2 class="section-title">
+        서비스 현황
+    </h2>
+
+    <div class="status-box">
+
+        <div class="status-item">
+            <span>노크로크 대리</span>
+            <strong class="online">원활</strong>
+        </div>
+
+        <div class="status-item">
+            <span>클랜 미네랄</span>
+            <strong class="mineral-online">
+    지연
+</strong>
+        </div>
+
+        <div class="status-item">
+            <span>리부트 대리</span>
+            <strong class="prepare">준비중</strong>
+        </div>
+<div class="status-info">
+
+    <span style="color:#45ff45;">
+        ● 원활 : 즉시 진행 가능한 상태
+    </span>
+
+    <span style="color:#ffb400;">
+        ● 지연 : 예약자가 많아 대기 발생
+    </span>
+
+    <span style="color:#ff4444;">
+        ● 준비중 : 준비중인 서비스
+    </span>
+
+</div>
+    </div>
+
+</section>
+
+<!-- 가격표 -->
+
+<section id="price" class="price-section">
+
+    <h2 class="section-title">
+        서비스 가격
+    </h2>
+
+    <div class="price-tabs">
+
+    <button class="tab-btn active"
+    onclick="showTab('knock', this)">
+        노크로크
+    </button>
+
+    <button class="tab-btn"
+    onclick="showTab('mineral', this)">
+        클랜미네랄
+    </button>
+
+    <button class="tab-btn"
+    onclick="showUnavailable()">
+        미네랄 대리
+    </button>
+
+    <button class="tab-btn"
+    onclick="showUnavailable()">
+        리부트 대리
+    </button>
+
+</div>
+
+    <!-- 노크 -->
+
+    <div id="knock" class="price-tab">
+
+        <div class="price-list">
+
+            <div class="price-item">
+
+                <div>
+                    <h3>노크로크 류화선(77,777개)</h3>
+                    <p>4-5시간 소요</p>
+                </div>
+
+                <span>15,000원</span>
+
+            </div>
+
+            <div class="price-item">
+
+                <div>
+                    <h3>노크로크 모든 펫(데몬캣,푸딩악마)</h3>
+                    <p>1시간30분 소요</p>
+                </div>
+
+                <span>2,000원</span>
+
+            </div>
+
+            <div class="price-item">
+
+                <div>
+                    <h3>노크로크 1장 모든 상점</h3>
+                    <p>9시간 소요</p>
+                </div>
+
+                <span>45,000원</span>
+
+            </div>
+<div class="price-item">
+
+                <div>
+                    <h3>노크</h3>
+                    <p>1000노크 3분 / 10,000노크 30분</p>
+                </div>
+
+                <span>1,000 노크 400원<br>
+                10,000 노크 4,000원</span>
+
+            </div>
+            <div class="price-item">
+
+                <div>
+                    <h3>신청전 주의사항</h3>
+                    <p>1. 안전가방 2칸 이상을 권장합니다.<br>
+                    2. 가방이 1칸이여도 진행 가능합니다<br>
+                3. 단 추금이 생길수 있습니다.</p>
+                </div>
+
+                <span>자세한 상담은 문의 부탁드립니다.</span>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 클랜 미네랄 -->
+
+    <div id="mineral" class="price-tab" style="display:none;">
+
+        <div class="price-list">
+
+            <div class="price-item">
+
+                <div>
+                    <h3>클랜 미네랄 100만</h3>
+                    <p>빠른 진행</p>
+                </div>
+
+                <span>4,000원</span>
+
+            </div>
+
+            <div class="price-item">
+
+                <div>
+                    <h3>현재 클랜미네랄 재고 부족 안내</h3>
+                    <p>현재 재윤샵 재고가 부족한 상황입니다.<br>
+                    약 2일내로 재고 정상화 될 예정이니 조금만 기달려 주세요</p>
+                </div>
+
+                <span>자세한 내용이나 예약은 문의주세요</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 장점 -->
+
+<section class="about-section">
+
+    <h2 class="section-title">
+        왜 재윤샵인가요?
+    </h2>
+
+    <div class="about-grid">
+
+        <div class="about-card">
+            ✓ 다양한 믿을만한 기사님들
+        </div>
+
+        <div class="about-card">
+            ✓ 빠르고 친절한 진행
+        </div>
+
+        <div class="about-card">
+            ✓ 익명 100% 보장
+        </div>
+
+        <div class="about-card">
+            ✓ 싼 가격
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 후기 -->
+
+<section id="review" class="review-section">
+
+    <h2 class="section-title">
+        REAL REVIEW
+    </h2>
+
+    <div class="review-slider">
+
+        <div class="review-track">
+
+            <img src="리뷰 1번.png" onclick="openReview(this.src)">
+            <img src="리뷰 2.png" onclick="openReview(this.src)">
+            <img src="리뷰3.png" onclick="openReview(this.src)">
+            <img src="리뷰 4.png" onclick="openReview(this.src)">
+            <img src="리뷰 5.png" onclick="openReview(this.src)">
+
+            <!-- 무한루프 복제 -->
+
+            <img src="리뷰 1번.png" onclick="openReview(this.src)">
+            <img src="리뷰 2.png" onclick="openReview(this.src)">
+            <img src="리뷰3.png" onclick="openReview(this.src)">
+            <img src="리뷰 4.png" onclick="openReview(this.src)">
+            <img src="리뷰 5.png" onclick="openReview(this.src)">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 문의 -->
+
+<section id="contact" class="contact-section">
+
+    <h2 class="section-title">
+        CONTACT
+    </h2>
+
+    <a href="https://open.kakao.com/me/jaeyunshop" class="contact-btn">
+        카카오톡 문의하기
+    </a>
+
+</section>
+
+<!-- 후기 확대 팝업 -->
+
+<div id="reviewPopup" onclick="closeReview()">
+
+    <img id="popupReview">
+
+</div>
+
+<!-- 파티클 -->
+
+<div class="particles"></div>
+
+<script src="script.js"></script>
+<div id="servicePopup">
+
+    <div class="popup-box">
+
+        <h3>알림</h3>
+
+        <p>
+            현재는 이용할 수 없는 서비스입니다.
+        </p>
+
+        <button onclick="closeUnavailable()">
+            X 닫기
+        </button>
+
+    </div>
+
+</div>
+</body>
+</html>
