@@ -158,7 +158,7 @@ overflow:hidden;
 
 .online{
 
-    color:#49ff49;
+    color:hsl(29, 100%, 51%);
 }
 
 .prepare{
@@ -1381,7 +1381,7 @@ html{
     word-break:keep-all;
 }
 .mineral-online{
-    color:#df8704;
+    color:hsl(36, 100%, 46%);
 }
 .status-guide{
 
