@@ -163,7 +163,7 @@ overflow:hidden;
 
 .prepare{
 
-    color:#ff0000;
+    color:#3cff00;
 }
 .hero-glow{
 
@@ -1580,4 +1580,44 @@ img{
 
     max-width:100%;
     height:auto;
+}
+/* 미네랄 대리 전용 */
+#mineralProxy .price-item{
+    border:1px solid rgba(255,170,220,.18);
+    background:linear-gradient(
+        180deg,
+        rgba(255,180,220,.08),
+        rgba(255,120,190,.03)
+    );
+    transition:.35s;
+}
+
+#mineralProxy .price-item:hover{
+    transform:translateY(-4px);
+    border-color:#ff9fcf;
+    box-shadow:0 0 25px rgba(255,140,200,.28);
+}
+
+#mineralProxy .price-item h3{
+    color:#ffd8ef;
+}
+
+#mineralProxy .price-item p{
+    color:#f3d9ec;
+}
+
+#mineralProxy .price-item span{
+    background:linear-gradient(90deg,#ffe3f5,#ff9ed0,#ff6ab2);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight:800;
+}
+/* 미네랄대리 버튼만 */
+button.mineral{
+    background:linear-gradient(135deg,#ff77b8,#ffb7df);
+    color:#fff;
+}
+
+button.mineral:hover{
+    box-shadow:0 0 20px rgba(255,120,190,.45);
 }
