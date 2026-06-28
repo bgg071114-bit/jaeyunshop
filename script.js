@@ -29,3 +29,8 @@ function showUnavailable(){
 function closeUnavailable(){
     document.getElementById("servicePopup").style.display = "none";
 }
+function closeNotice(){
+
+    document.getElementById("noticePopup").style.display="none";
+
+}
