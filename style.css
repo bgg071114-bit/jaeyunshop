@@ -1405,7 +1405,7 @@ html{
 
 .guide-delay{
 
-    color:#ffb300;
+    color:#1eff00;
 }
 
 .guide-prepare{
@@ -1647,8 +1647,8 @@ button.mineral:hover{
 
     background: linear-gradient(
         135deg,
-        #2f223a,
-        #201828
+        #fffb02,
+        #ffee00
     );
 
     border: 2px solid #ff9fd0;
@@ -1706,4 +1706,2142 @@ button.mineral:hover{
 
     cursor:pointer;
     font-size:18px;
+}
+/* ========================= */
+/* 여름 이벤트 - 미네랄대리 */
+/* ========================= */
+
+#mineralProxy .price-list{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:22px;
+
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
+
+#mineralProxy .price-item{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:35px 25px;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(160,240,255,.18),
+        rgba(0,170,255,.05)
+    );
+
+    border:2px solid rgba(120,230,255,.35);
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s;
+}
+
+#mineralProxy .price-item::before{
+
+    content:"🌊";
+
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    font-size:28px;
+
+    opacity:.9;
+}
+
+#mineralProxy .price-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-60%;
+    top:0;
+
+    width:55%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:.7s;
+}
+
+#mineralProxy .price-item:hover::after{
+
+    left:130%;
+}
+
+#mineralProxy .price-item:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#87e7ff;
+
+    box-shadow:
+    0 0 35px rgba(100,220,255,.35);
+}
+
+#mineralProxy .price-item h3{
+
+    color:#e7fcff;
+
+    font-size:23px;
+
+    margin-bottom:10px;
+}
+
+#mineralProxy .price-item p{
+
+    color:#d2f8ff;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+}
+
+#mineralProxy .price-item span{
+
+    font-size:34px;
+
+    font-weight:900;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ffffff,
+        #bfffff,
+        #6fe9ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* 버튼 */
+
+button.mineral{
+
+    background:
+    linear-gradient(
+        135deg,
+        #54d8ff,
+        #00bfff
+    ) !important;
+
+    color:white !important;
+
+    box-shadow:
+    0 0 18px rgba(0,200,255,.35);
+}
+
+button.mineral:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 30px rgba(0,220,255,.55);
+}
+
+/* 이벤트 뱃지 */
+
+#mineralProxy .price-item:first-child::before{
+
+    content:"🏖️ EVENT";
+    font-size:14px;
+
+    background:#00bfff;
+
+    color:white;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+}
+
+/* 마지막 안내 */
+
+#mineralProxy .price-item:last-child{
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,.12),
+        rgba(120,220,255,.08)
+    );
+}
+/* ========================= */
+/* 클랜미네랄 여름 이벤트 */
+/* ========================= */
+
+#mineral .price-item{
+
+    position:relative;
+    overflow:hidden;
+
+    border:1px solid rgba(90,220,255,.25);
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(90,220,255,.10),
+        rgba(0,140,255,.03)
+    );
+
+    transition:.35s;
+}
+
+#mineral .price-item:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#6de6ff;
+
+    box-shadow:
+    0 0 35px rgba(70,220,255,.35);
+
+}
+
+#mineral .price-item::before{
+
+    content:"🌴 SUMMER EVENT";
+
+    position:absolute;
+
+    top:15px;
+    right:-45px;
+
+    transform:rotate(35deg);
+
+    background:linear-gradient(
+        90deg,
+        #1cc8ff,
+        #7cf7ff
+    );
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    padding:6px 60px;
+
+    letter-spacing:1px;
+}
+
+#mineral .price-item h3{
+
+    color:#dffcff;
+
+    text-shadow:0 0 12px rgba(80,230,255,.35);
+
+}
+
+#mineral .price-item p{
+
+    color:#bdefff;
+
+}
+
+#mineral .price-item span{
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #76efff,
+        #27c9ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    font-size:34px;
+
+    font-weight:900;
+}
+
+/* 물결 효과 */
+
+#mineral .price-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-20%;
+    bottom:-70px;
+
+    width:140%;
+    height:120px;
+
+    background:
+    radial-gradient(
+        ellipse at center,
+        rgba(255,255,255,.13),
+        transparent 70%
+    );
+
+    animation:waveMove 5s linear infinite;
+}
+
+@keyframes waveMove{
+
+    0%{
+        transform:translateX(-10px);
+    }
+
+    50%{
+        transform:translateX(25px);
+    }
+
+    100%{
+        transform:translateX(-10px);
+    }
+
+}
+/* =========================
+   SUMMER EVENT THEME
+========================= */
+
+body{
+
+    background:
+    linear-gradient(
+        180deg,
+        #7ed9ff 0%,
+        #b8efff 35%,
+        #fff5d7 100%
+    );
+
+    color:#25354d;
+
+    font-family:'Noto Sans KR',sans-serif;
+}
+
+/* 헤더 */
+
+.header{
+
+    background:rgba(118,214,255,.88);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:2px solid rgba(255,255,255,.45);
+
+    box-shadow:0 10px 25px rgba(0,170,255,.18);
+}
+
+.logo{
+
+    color:#fff;
+
+    text-shadow:
+    0 0 15px rgba(255,255,255,.9),
+    0 0 30px #53d8ff;
+}
+
+.header nav a{
+
+    color:#ffffff;
+
+    font-weight:800;
+}
+
+.header nav a:hover{
+
+    color:#fff7b8;
+
+    text-shadow:0 0 15px #fff;
+}
+
+/* 메인 */
+
+.hero{
+
+background:
+
+linear-gradient(
+180deg,
+#79dfff,
+#b8f5ff 55%,
+#fff4d6
+);
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+/* 햇빛 */
+
+.hero::before{
+
+content:'';
+
+position:absolute;
+
+top:-180px;
+right:-150px;
+
+width:500px;
+height:500px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+circle,
+rgba(255,248,179,.95),
+rgba(255,248,179,.15),
+transparent 75%
+);
+
+}
+
+/* 파도 */
+
+.hero::after{
+
+content:'';
+
+position:absolute;
+
+bottom:-35px;
+left:0;
+
+width:100%;
+height:140px;
+
+background:
+
+radial-gradient(circle at 50% 0,#ffffff 35%,transparent 36%) repeat-x;
+
+background-size:120px 90px;
+
+opacity:.55;
+
+}
+
+.hero h1{
+
+background:
+
+linear-gradient(
+180deg,
+#ffffff,
+#fff2a3,
+#ffb347
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 0 25px rgba(255,255,255,.6);
+
+}
+
+.hero p{
+
+color:#2d5979;
+
+}
+
+/* 버튼 */
+
+.hero-buttons a{
+
+background:
+
+linear-gradient(
+135deg,
+#ffd36e,
+#ffb347
+);
+
+color:#6b4a00;
+
+font-weight:900;
+
+border:2px solid #ffe7a6;
+
+box-shadow:
+
+0 8px 20px rgba(255,193,7,.35);
+
+}
+
+.hero-buttons a:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 12px 35px rgba(255,193,7,.45);
+
+}
+/* ==========================================
+   SUMMER PRICE EVENT
+========================================== */
+
+/* 가격 섹션 */
+
+.price-section{
+
+    position:relative;
+}
+
+.price-section::before{
+
+    content:"☀️ SUMMER EVENT";
+
+    display:block;
+
+    text-align:center;
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+    color:#ff9f1a;
+
+    margin-bottom:12px;
+
+    font-weight:800;
+}
+
+/* 버튼 */
+
+.price-tabs{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+
+    margin-bottom:40px;
+}
+
+/* 기본(바다) */
+
+.tab-btn{
+
+    background:linear-gradient(
+    135deg,
+    #59d5ff,
+    #0ea5ff
+    ) !important;
+
+    color:white !important;
+
+    border:2px solid rgba(255,255,255,.6);
+
+    box-shadow:
+    0 8px 18px rgba(0,180,255,.25);
+
+    transition:.35s;
+}
+
+.tab-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 10px 30px rgba(0,170,255,.4);
+}
+
+/* 선택됨 = 모래 */
+
+.tab-btn.active{
+
+    background:linear-gradient(
+    135deg,
+    #ffe6a8,
+    #ffd37b
+    ) !important;
+
+    color:#8c5d00 !important;
+
+    border:2px solid #fff7d4;
+
+    box-shadow:
+    0 0 25px rgba(255,215,120,.6);
+}
+
+/* ===========================
+   가격표
+=========================== */
+
+.price-list{
+
+    background:
+
+    linear-gradient(
+    180deg,
+    #fff8eb,
+    #fff2d4
+    );
+
+    border-radius:28px;
+
+    border:3px solid #ffe0a8;
+
+    box-shadow:
+
+    0 18px 40px rgba(255,190,80,.15);
+
+    overflow:hidden;
+}
+
+/* 카드 */
+
+.price-item{
+
+    position:relative;
+
+    background:
+
+    linear-gradient(
+    180deg,
+    rgba(255,255,255,.65),
+    rgba(255,246,220,.92)
+    );
+
+    border-bottom:1px solid rgba(255,214,125,.45);
+
+    transition:.35s;
+
+    overflow:hidden;
+}
+
+/* 햇빛 */
+
+.price-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-80px;
+    right:-70px;
+
+    width:160px;
+    height:160px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+    circle,
+    rgba(255,255,255,.85),
+    rgba(255,255,255,0)
+    );
+}
+
+/* 파도 */
+
+.price-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:100%;
+    height:6px;
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #57d9ff,
+    #7ae8ff,
+    #57d9ff
+    );
+}
+
+.price-item:hover{
+
+    transform:translateY(-7px);
+
+    background:#fffef9;
+
+    box-shadow:
+
+    0 12px 30px rgba(255,190,80,.2);
+}
+
+.price-item h3{
+
+    color:#168fd8;
+
+    font-size:23px;
+
+    font-weight:900;
+}
+
+.price-item p{
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+.price-item span{
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #ff9800,
+    #ffca28
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    font-size:38px;
+
+    font-weight:900;
+}
+
+/* 무료 */
+
+.free{
+
+    background:#fff8d9;
+}
+
+.free span{
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #00c853,
+    #79ff72
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* 미네랄대리 */
+
+#mineralProxy .price-item{
+
+    border-left:8px solid #ff91cb;
+}
+
+#mineralProxy .price-item h3{
+
+    color:#ff4ea0;
+}
+
+#mineralProxy .price-item span{
+
+    background:
+
+    linear-gradient(
+    90deg,
+    #ff65c2,
+    #ffa2dd
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+/* ==========================================
+        SUMMER STATUS / ABOUT / REVIEW
+========================================== */
+
+/* ---------- 서비스 현황 ---------- */
+
+.status-box{
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff,
+        #eefcff
+    );
+
+    border:3px solid #9ee9ff;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 15px 35px rgba(0,180,255,.12);
+
+    overflow:hidden;
+}
+
+.status-item{
+
+    padding:26px 30px;
+
+    border-bottom:1px solid rgba(0,180,255,.12);
+
+    transition:.3s;
+}
+
+.status-item:hover{
+
+    background:#f5fdff;
+
+    transform:translateX(8px);
+}
+
+.status-item span{
+
+    color:#2873a8;
+
+    font-weight:700;
+}
+
+.online{
+
+    color:#19c800;
+
+    font-weight:900;
+}
+
+.mineral-online{
+
+    color:#19c800;
+
+    font-weight:900;
+}
+
+.prepare{
+
+    color:#ff7d2f;
+
+    font-weight:900;
+}
+
+.status-info{
+
+    background:#f5fdff;
+
+    padding:22px;
+
+    line-height:2;
+}
+
+/* ---------- WHY JAEYUN ---------- */
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+}
+
+.about-card{
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff,
+        #fff8ea
+    );
+
+    border:3px solid #ffe3a5;
+
+    border-radius:24px;
+
+    padding:32px;
+
+    color:#3278a8;
+
+    font-size:20px;
+
+    font-weight:800;
+
+    transition:.35s;
+
+    box-shadow:
+    0 12px 30px rgba(255,210,80,.15);
+}
+
+.about-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#7bdfff;
+
+    box-shadow:
+    0 20px 40px rgba(0,180,255,.18);
+}
+
+/* ---------- 후기 ---------- */
+
+.review-slider{
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffffff,
+        #edfaff
+    );
+
+    border-radius:28px;
+
+    border:3px solid #8ce5ff;
+
+    box-shadow:
+    0 18px 35px rgba(0,180,255,.15);
+
+    padding:28px;
+}
+
+.review-track{
+
+    gap:24px;
+}
+
+.review-track img{
+
+    border-radius:20px;
+
+    border:4px solid white;
+
+    transition:.35s;
+
+    box-shadow:
+    0 10px 25px rgba(0,170,255,.18);
+}
+
+.review-track img:hover{
+
+    transform:
+
+    translateY(-10px)
+    rotate(-2deg);
+
+    box-shadow:
+
+    0 20px 40px rgba(0,170,255,.28);
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-btn{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffd46d,
+        #ffb24a
+    );
+
+    color:#6d4900;
+
+    font-weight:900;
+
+    border:2px solid #fff2b8;
+
+    box-shadow:
+    0 12px 28px rgba(255,180,70,.35);
+}
+
+.contact-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+    0 18px 38px rgba(255,180,70,.5);
+}
+
+/* ---------- 제목 ---------- */
+
+.section-title{
+
+    color:#2e81bf;
+
+    text-shadow:
+
+    0 0 20px rgba(130,220,255,.5);
+}
+
+/* ---------- 여름 아이콘 ---------- */
+
+.section-title::before{
+
+    content:"🏖";
+
+    background:none;
+
+    flex:none;
+
+    height:auto;
+}
+
+.section-title::after{
+
+    content:"🌴";
+
+    background:none;
+
+    flex:none;
+
+    height:auto;
+}
+/* ==========================================
+        SUMMER FINAL EFFECT
+========================================== */
+
+/* 하늘 */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-3;
+
+    background:
+
+    radial-gradient(circle at 10% 12%,rgba(255,255,255,.9) 0 35px,transparent 36px),
+    radial-gradient(circle at 18% 15%,rgba(255,255,255,.9) 0 28px,transparent 29px),
+    radial-gradient(circle at 75% 18%,rgba(255,255,255,.95) 0 45px,transparent 46px),
+    radial-gradient(circle at 82% 15%,rgba(255,255,255,.95) 0 30px,transparent 31px);
+
+    animation:cloudMove 60s linear infinite;
+}
+
+@keyframes cloudMove{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(120px);
+
+    }
+
+}
+
+/* 햇빛 */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    top:-180px;
+    right:-180px;
+
+    width:550px;
+    height:550px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle,
+    rgba(255,255,170,.95),
+    rgba(255,255,170,.15),
+    transparent 75%);
+
+    pointer-events:none;
+
+    animation:sunGlow 4s ease-in-out infinite;
+
+    z-index:-2;
+}
+
+@keyframes sunGlow{
+
+0%,100%{
+
+filter:blur(10px);
+
+opacity:.9;
+
+}
+
+50%{
+
+filter:blur(30px);
+
+opacity:1;
+
+}
+
+}
+
+/* 파도 */
+
+.price-section::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+bottom:-45px;
+
+width:100%;
+height:55px;
+
+background:
+
+repeating-radial-gradient(circle at 30px 0,#82e7ff 0 24px,transparent 25px);
+
+opacity:.35;
+
+}
+
+/* 카드 */
+
+.about-card,
+.price-item,
+.status-item{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.about-card::before,
+.price-item::before,
+.status-item::before{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+left:-30%;
+
+width:60px;
+height:250%;
+
+background:
+
+rgba(255,255,255,.35);
+
+transform:rotate(25deg);
+
+transition:.6s;
+
+}
+
+.about-card:hover::before,
+.price-item:hover::before,
+.status-item:hover::before{
+
+left:130%;
+
+}
+
+/* 버튼 */
+
+.hero-buttons a,
+.contact-btn,
+.tab-btn{
+
+transition:.35s;
+
+}
+
+.hero-buttons a:hover,
+.contact-btn:hover,
+.tab-btn:hover{
+
+transform:
+
+translateY(-6px)
+scale(1.03);
+
+}
+
+/* 후기 */
+
+.review-track img{
+
+animation:floatImage 3s ease-in-out infinite;
+
+}
+
+.review-track img:nth-child(even){
+
+animation-delay:1.5s;
+
+}
+
+@keyframes floatImage{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+
+/* 팝업 */
+
+.notice-box{
+
+background:
+
+linear-gradient(
+180deg,
+#fffef6,
+#fff5dc
+);
+
+border:3px solid #ffd36b;
+
+box-shadow:
+
+0 0 40px rgba(255,210,80,.35);
+
+}
+
+.notice-box h2{
+
+color:#ff9800;
+
+}
+
+.notice-close{
+
+background:
+
+linear-gradient(
+135deg,
+#ffb347,
+#ff9800
+);
+
+}
+
+.notice-close:hover{
+
+transform:rotate(90deg);
+
+}
+
+/* 스크롤 */
+
+::-webkit-scrollbar{
+
+width:12px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#bff2ff;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:
+
+linear-gradient(
+180deg,
+#4fd4ff,
+#ffd36b
+);
+
+border-radius:20px;
+
+}
+
+/* 반짝이 */
+
+.hero-content{
+
+animation:heroFloat 4s ease-in-out infinite;
+
+}
+
+@keyframes heroFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-8px);
+
+}
+
+}
+/* 글씨 복구 */
+
+.price-item h3{
+    color:#fff !important;
+}
+
+.price-item p{
+    color:#d8d8d8 !important;
+}
+
+.about-card{
+    color:#fff !important;
+}
+
+.status-item span{
+    color:#fff !important;
+}
+
+.section-title{
+    color:#fff !important;
+}
+
+.hero p{
+    color:#fff !important;
+}
+
+.contact-section{
+    color:#fff !important;
+}
+/* ===========================
+   여름 테마 글씨 가독성 패치
+=========================== */
+
+/* 가격표 제목 */
+
+.price-item h3{
+
+    color:#00a7e8 !important;
+
+    text-shadow:
+        0 0 8px rgba(0,200,255,.55);
+
+    font-weight:900;
+}
+
+/* 가격표 설명 */
+
+.price-item p{
+
+    color:#16739d !important;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,.6);
+
+    font-weight:700;
+}
+
+/* 가격 */
+
+.price-item span{
+
+    background:none !important;
+
+    color:#00c9ff !important;
+
+    -webkit-text-fill-color:#00c9ff !important;
+
+    text-shadow:
+        0 0 12px rgba(0,220,255,.65);
+
+    font-weight:900;
+}
+
+/* 서비스현황 왼쪽 글씨 */
+
+.status-item span{
+
+    color:#0c88cb !important;
+
+    font-weight:800;
+
+    text-shadow:
+        0 0 8px rgba(0,200,255,.35);
+}
+
+/* WHY 카드 */
+
+.about-card{
+
+    color:#0c88cb !important;
+
+    text-shadow:
+        0 0 6px rgba(255,255,255,.8);
+}
+
+/* 문의 */
+
+.contact-btn{
+
+    color:#714900 !important;
+}
+
+/* 제목 */
+
+.section-title{
+
+    color:#008ad8 !important;
+
+    text-shadow:
+        0 0 12px rgba(0,200,255,.5);
+}
+
+/* 메인 설명 */
+
+.hero p{
+
+    color:#005b82 !important;
+
+    font-weight:700;
+}
+
+/* 모든 작은 글씨 */
+
+.price-item small,
+.price-item div,
+.status-info{
+
+    color:#16739d !important;
+}
+/* ========================= */
+/* 노크로크 + 클랜미네랄 카드형 */
+/* ========================= */
+
+#knock .price-list,
+#mineral .price-list{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:24px;
+
+    background:transparent;
+    border:none;
+    box-shadow:none;
+
+    overflow:visible;
+}
+
+#knock .price-item,
+#mineral .price-item{
+
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    min-height:250px;
+
+    padding:30px;
+
+    border-radius:26px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(255,255,255,.35),
+        rgba(255,255,255,.18)
+    );
+
+    border:2px solid #7ddcff;
+
+    box-shadow:
+    0 0 25px rgba(0,190,255,.15);
+
+    transition:.35s;
+}
+
+/* 핑크 라인 */
+
+#knock .price-item::before,
+#mineral .price-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:8px;
+    height:100%;
+
+    background:
+    linear-gradient(
+        180deg,
+        #ff6fb5,
+        #ffa7da
+    );
+
+}
+
+/* 햇빛 */
+
+#knock .price-item::after,
+#mineral .price-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:-60px;
+    top:-80px;
+
+    width:120px;
+    height:420px;
+
+    transform:rotate(25deg);
+
+    background:rgba(255,255,255,.22);
+
+}
+
+/* 제목 */
+
+#knock .price-item h3,
+#mineral .price-item h3{
+
+    font-size:32px;
+
+    color:#00a8ff;
+
+    text-shadow:
+        0 0 8px rgba(0,180,255,.45);
+
+    margin-bottom:10px;
+}
+
+/* 설명 */
+
+#knock .price-item p,
+#mineral .price-item p{
+
+    color:#08517d;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:18px;
+}
+
+/* 가격 */
+
+#knock .price-item span,
+#mineral .price-item span{
+
+    font-size:58px;
+
+    font-weight:900;
+
+    color:#00bfff;
+
+    text-shadow:
+        0 0 15px rgba(0,190,255,.45);
+
+}
+
+/* 호버 */
+
+#knock .price-item:hover,
+#mineral .price-item:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#ff89cb;
+
+    box-shadow:
+        0 0 35px rgba(255,120,190,.28);
+}
+
+/* 모바일 */
+
+@media(max-width:768px){
+
+#knock .price-list,
+#mineral .price-list{
+
+    grid-template-columns:1fr;
+}
+
+#knock .price-item,
+#mineral .price-item{
+
+    min-height:210px;
+}
+
+#knock .price-item h3,
+#mineral .price-item h3{
+
+    font-size:24px;
+}
+
+#knock .price-item span,
+#mineral .price-item span{
+
+    font-size:42px;
+}
+
+}
+/* =================================================== */
+/* 노크로크 + 클랜미네랄 = 미네랄대리와 완전 동일 */
+/* =================================================== */
+
+#knock .price-list,
+#mineral .price-list{
+
+    display:grid !important;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:24px;
+
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    overflow:visible !important;
+}
+
+/* 카드 */
+
+#knock .price-item,
+#mineral .price-item{
+
+    position:relative;
+
+    display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    min-height:250px;
+    padding:28px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.18) !important;
+
+    border:2px solid #8fe9ff !important;
+
+    box-shadow:
+        0 0 20px rgba(0,180,255,.18);
+
+    transition:.35s;
+}
+
+/* 왼쪽 핑크라인 */
+
+#knock .price-item::before,
+#mineral .price-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:8px;
+    height:100%;
+
+    background:#ff7fc7;
+}
+
+/* 햇빛 */
+
+#knock .price-item::after,
+#mineral .price-item::after{
+
+    content:"🏖️";
+
+    position:absolute;
+
+    left:22px;
+    top:18px;
+
+    font-size:24px;
+
+    transform:rotate(-20deg);
+
+    opacity:.95;
+}
+
+/* 제목 */
+
+#knock .price-item h3,
+#mineral .price-item h3{
+
+    font-size:22px !important;
+
+    color:#009ff5 !important;
+
+    font-weight:900;
+
+    text-shadow:
+        0 0 12px rgba(0,180,255,.4);
+
+    margin-bottom:12px;
+}
+
+/* 설명 */
+
+#knock .price-item p,
+#mineral .price-item p{
+
+    color:#12507a !important;
+
+    font-size:17px !important;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+}
+
+/* 가격 */
+
+#knock .price-item span,
+#mineral .price-item span{
+
+    display:block;
+
+    font-size:58px !important;
+
+    font-weight:900;
+
+    color:#00b8ff !important;
+
+    text-shadow:
+        0 0 18px rgba(0,180,255,.45);
+}
+
+/* 호버 */
+
+#knock .price-item:hover,
+#mineral .price-item:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#ff8fd2 !important;
+
+    box-shadow:
+        0 0 28px rgba(255,140,210,.25);
+}
+
+/* 모바일 */
+
+@media(max-width:768px){
+
+#knock .price-list,
+#mineral .price-list{
+
+    grid-template-columns:1fr;
+}
+
+#knock .price-item,
+#mineral .price-item{
+
+    min-height:220px;
+}
+
+#knock .price-item h3,
+#mineral .price-item h3{
+
+    font-size:20px !important;
+}
+
+#knock .price-item span,
+#mineral .price-item span{
+
+    font-size:42px !important;
+}
+
+}
+/* ===== 가격표 전부 동일 카드화 ===== */
+
+.price-list{
+
+display:grid !important;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:25px;
+
+background:none !important;
+border:none !important;
+box-shadow:none !important;
+
+width:100% !important;
+max-width:1200px !important;
+
+margin:auto;
+}
+
+.price-item{
+
+height:260px !important;
+
+display:flex !important;
+
+flex-direction:column;
+
+justify-content:center !important;
+align-items:center !important;
+
+text-align:center !important;
+
+padding:30px !important;
+
+border-radius:30px !important;
+
+background:
+rgba(255,255,255,.16) !important;
+
+border:2px solid #89e6ff !important;
+
+box-shadow:
+0 0 25px rgba(0,200,255,.12);
+
+overflow:hidden;
+}
+
+.price-item h3{
+
+font-size:28px !important;
+
+font-weight:800 !important;
+
+color:#00aef3 !important;
+
+margin-bottom:15px;
+}
+
+.price-item p{
+
+font-size:18px !important;
+
+color:#055e86 !important;
+
+margin-bottom:25px;
+}
+
+.price-item span{
+
+font-size:55px !important;
+
+font-weight:900 !important;
+
+color:#00c4ff !important;
+
+text-shadow:
+0 0 20px rgba(0,200,255,.25);
+}
+
+/* 안내카드 */
+
+.price-item:last-child{
+
+height:340px !important;
+}
+
+/* 모바일 */
+
+@media(max-width:768px){
+
+.price-list{
+
+grid-template-columns:1fr;
+}
+
+.price-item{
+
+height:auto !important;
+min-height:240px;
+}
+
+.price-item span{
+
+font-size:36px !important;
+}
+
+}
+/* ===== 카드 크기 수정 ===== */
+
+.price-list{
+    display:grid !important;
+    grid-template-columns:repeat(3,1fr) !important;
+    gap:22px !important;
+
+    background:none !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+
+.price-item{
+
+    display:flex !important;
+    flex-direction:column !important;
+    justify-content:space-between !important;
+
+    min-height:300px !important;
+    height:auto !important;
+
+    padding:28px 24px !important;
+
+    border-radius:24px !important;
+
+    overflow:visible !important;
+}
+
+.price-item div{
+    width:100%;
+}
+
+.price-item h3{
+
+    font-size:22px !important;
+
+    line-height:1.5 !important;
+
+    word-break:keep-all;
+}
+
+.price-item p{
+
+    margin-top:10px !important;
+
+    font-size:15px !important;
+
+    line-height:1.8 !important;
+
+    white-space:normal !important;
+}
+
+.price-item span{
+
+    margin-top:auto !important;
+
+    font-size:30px !important;
+
+    line-height:1.5 !important;
+
+    word-break:keep-all;
+}
+
+/* 모바일 */
+
+@media(max-width:900px){
+
+.price-list{
+
+grid-template-columns:1fr !important;
+
+}
+
+.price-item{
+
+min-height:auto !important;
+
+}
+
+}
+/* ===== 카드 전체 축소 ===== */
+
+.price-list{
+    gap:16px !important;
+}
+
+.price-item{
+
+    min-height:240px !important;
+
+    padding:18px 18px !important;
+
+    border-radius:18px !important;
+
+    transform:scale(.96);
+}
+
+.price-item:hover{
+
+    transform:scale(.98) translateY(-4px) !important;
+}
+
+.price-item h3{
+
+    font-size:18px !important;
+
+    line-height:1.35 !important;
+}
+
+.price-item p{
+
+    margin-top:6px !important;
+
+    font-size:12px !important;
+
+    line-height:1.5 !important;
+}
+
+.price-item span{
+
+    margin-top:12px !important;
+
+    font-size:24px !important;
+
+    line-height:1.35 !important;
+}
+
+/* 카드 호버 애니메이션 약하게 */
+
+.price-item:hover{
+
+    box-shadow:0 0 18px rgba(0,210,255,.25) !important;
+}
+
+/* 모바일 */
+
+@media(max-width:900px){
+
+.price-list{
+    grid-template-columns:1fr !important;
+}
+
+.price-item{
+
+    min-height:auto !important;
+
+    transform:none !important;
+}
+
+.price-item h3{
+    font-size:17px !important;
+}
+
+.price-item p{
+    font-size:12px !important;
+}
+
+.price-item span{
+    font-size:22px !important;
+}
+
+}
+/* ========================= */
+/* 노크로크 + 클랜미네랄만 글씨 축소 */
+/* 애니메이션 제거 */
+/* ========================= */
+
+/* 애니메이션 제거 */
+#knock .price-item,
+#mineral .price-item{
+    transform:none !important;
+    transition:none !important;
+    animation:none !important;
+}
+
+#knock .price-item:hover,
+#mineral .price-item:hover{
+    transform:none !important;
+    box-shadow:none !important;
+}
+
+#knock .price-item::before,
+#mineral .price-item::before{
+    display:none !important;
+}
+
+/* 제목 */
+#knock .price-item h3,
+#mineral .price-item h3{
+
+    font-size:17px !important;
+    line-height:1.35 !important;
+}
+
+/* 설명 */
+#knock .price-item p,
+#mineral .price-item p{
+
+    font-size:12px !important;
+    line-height:1.5 !important;
+}
+
+/* 가격 */
+#knock .price-item span,
+#mineral .price-item span{
+
+    font-size:21px !important;
+    line-height:1.35 !important;
+}
+
+/* 카드 높이 자동 */
+#knock .price-item,
+#mineral .price-item{
+
+    min-height:auto !important;
+    padding:18px !important;
 }
