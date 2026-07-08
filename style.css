@@ -3845,3 +3845,137 @@ min-height:auto !important;
     min-height:auto !important;
     padding:18px !important;
 }
+/* ===== 점검화면 ===== */
+
+#maintenanceOverlay{
+
+position:fixed;
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:
+linear-gradient(rgba(10,20,35,.93),rgba(10,20,35,.93)),
+linear-gradient(#5fd8ff,#8be6ff);
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+z-index:999999;
+
+}
+
+.maintenance-box{
+
+width:700px;
+
+background:#15283b;
+
+border:2px solid #27c8ff;
+
+border-radius:25px;
+
+padding:60px;
+
+text-align:center;
+
+box-shadow:
+
+0 0 50px rgba(0,180,255,.45);
+
+animation:popup .5s;
+
+}
+
+.maintenance-logo{
+
+font-size:90px;
+
+margin-bottom:20px;
+
+animation:float 3s ease infinite;
+
+}
+
+.maintenance-box h3{
+
+font-size:32px;
+
+color:white;
+
+margin-bottom:10px;
+
+}
+
+.maintenance-box h1{
+
+font-size:75px;
+
+color:#27d4ff;
+
+margin-bottom:25px;
+
+text-shadow:0 0 25px #27d4ff;
+
+}
+
+.maintenance-box p{
+
+font-size:23px;
+
+color:#d8ecff;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.maintenance-info{
+
+background:#0f1d2c;
+
+padding:25px;
+
+border-radius:15px;
+
+color:#fff;
+
+font-size:19px;
+
+line-height:1.8;
+
+border-left:5px solid #27d4ff;
+
+}
+
+@keyframes float{
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+transform:scale(.9);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
