@@ -34,3 +34,59 @@ function closeNotice(){
     document.getElementById("noticePopup").style.display="none";
 
 }
+function openContactPopup(){
+
+    document.getElementById("contactPopup").style.display="flex";
+
+    const agrees=document.querySelectorAll(".agree");
+    const btn=document.getElementById("agreeBtn");
+
+    agrees.forEach(box=>{
+
+        box.onchange=function(){
+
+            let ok=true;
+
+            agrees.forEach(a=>{
+
+                if(!a.checked) ok=false;
+
+            });
+
+            if(ok){
+
+                btn.disabled=false;
+                btn.classList.add("active");
+
+            }else{
+
+                btn.disabled=true;
+                btn.classList.remove("active");
+
+            }
+
+        }
+
+    });
+
+}
+function startLoading(){
+
+    document.getElementById("contactPopup").style.display="none";
+
+    const loading = document.getElementById("loadingPopup");
+
+    loading.style.display="flex";
+
+    setTimeout(function(){
+
+        window.location.href="https://open.kakao.com/me/jaeyunshop";
+
+    },3000);
+
+}
+function goOpenChat(){
+
+    window.location.href="https://open.kakao.com/me/jaeyunshop";
+
+}
