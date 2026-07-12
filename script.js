@@ -1,92 +1,177 @@
-function showTab(tabId, btn){
+const counters=document.querySelectorAll(".counter");
 
-    document.getElementById("knock").style.display = "none";
-    document.getElementById("mineral").style.display = "none";
-    document.getElementById("mineralProxy").style.display = "none";
+const observer=new IntersectionObserver(entries=>{
 
-    document.getElementById(tabId).style.display = "block";
+entries.forEach(entry=>{
 
-    document.querySelectorAll(".tab-btn").forEach(button => {
-        button.classList.remove("active");
+if(entry.isIntersecting){
+
+const counter=entry.target;
+
+const target=+counter.dataset.target;
+
+let count=0;
+
+const speed=target/70;
+
+const update=()=>{
+
+count+=speed;
+
+if(count<target){
+
+counter.innerText=Math.floor(count);
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+};
+
+update();
+
+observer.unobserve(counter);
+
+}
+
+});
+
+});
+
+counters.forEach(counter=>{
+
+observer.observe(counter);
+
+});
+const reveals=document.querySelectorAll(".reveal");
+
+const revealObserver=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("active");
+
+}
+
+});
+
+},{
+threshold:.15
+});
+
+reveals.forEach(item=>{
+
+revealObserver.observe(item);
+
+});
+const popup = document.getElementById("popup");
+const closeBtn = document.getElementById("closePopup");
+const today = document.getElementById("todayClose");
+
+if (popup && closeBtn && today) {
+
+    const hideUntil = localStorage.getItem("popupHide");
+
+    if (hideUntil && Number(hideUntil) > Date.now()) {
+        popup.style.display = "none";
+    }
+
+    closeBtn.addEventListener("click", () => {
+
+        if (today.checked) {
+            localStorage.setItem("popupHide", Date.now() + 86400000);
+        }
+
+        popup.style.display = "none";
     });
 
-    btn.classList.add("active");
+}
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item=>{
+
+    const btn=item.querySelector(".faq-question");
+
+    btn.addEventListener("click",()=>{
+
+        item.classList.toggle("active");
+
+    });
+
+});
+const contactBtn = document.querySelector(".contact-main");
+const contactMenu = document.querySelector(".contact-menu");
+
+if(contactBtn && contactMenu){
+
+    contactBtn.addEventListener("click",()=>{
+
+        contactMenu.classList.toggle("show");
+
+    });
+
+}
+function openContact(){
+
+    const popup = document.getElementById("contactPopup");
+
+    if(popup){
+
+        popup.style.display="flex";
+
+    }
+
 }
 
-function openReview(imgSrc){
-    document.getElementById("reviewPopup").style.display = "flex";
-    document.getElementById("popupReview").src = imgSrc;
-}
+document.addEventListener("DOMContentLoaded",()=>{
 
-function closeReview(){
-    document.getElementById("reviewPopup").style.display = "none";
-}
+    const popup=document.getElementById("contactPopup");
+    const close=document.getElementById("closeContact");
 
-function showUnavailable(){
-    document.getElementById("servicePopup").style.display = "flex";
-}
+    if(close){
 
-function closeUnavailable(){
-    document.getElementById("servicePopup").style.display = "none";
-}
-function closeNotice(){
+        close.onclick=()=>{
 
-    document.getElementById("noticePopup").style.display="none";
+            popup.style.display="none";
 
-}
-function openContactPopup(){
+        };
 
-    document.getElementById("contactPopup").style.display="flex";
+        popup.onclick=(e)=>{
 
-    const agrees=document.querySelectorAll(".agree");
-    const btn=document.getElementById("agreeBtn");
+            if(e.target===popup){
 
-    agrees.forEach(box=>{
-
-        box.onchange=function(){
-
-            let ok=true;
-
-            agrees.forEach(a=>{
-
-                if(!a.checked) ok=false;
-
-            });
-
-            if(ok){
-
-                btn.disabled=false;
-                btn.classList.add("active");
-
-            }else{
-
-                btn.disabled=true;
-                btn.classList.remove("active");
+                popup.style.display="none";
 
             }
 
-        }
+        };
 
-    });
+    }
 
-}
-function startLoading(){
+});
+function copyDiscordID(){
 
-    document.getElementById("contactPopup").style.display="none";
+    const discordID = "seoyeoniluvu";
 
-    const loading = document.getElementById("loadingPopup");
+    navigator.clipboard.writeText(discordID);
 
-    loading.style.display="flex";
+    const toast=document.getElementById("toast");
 
-    setTimeout(function(){
+    toast.innerHTML=
+    "✅ 디스코드 아이디가 복사되었습니다.<br>디스코드 친구추가 후 문의해주세요.<br><br><b>"+discordID+"</b>";
 
-        window.location.href="https://open.kakao.com/me/jaeyunshop";
+    toast.classList.add("show");
+
+    setTimeout(()=>{
+
+        toast.classList.remove("show");
 
     },3000);
-
-}
-function goOpenChat(){
-
-    window.location.href="https://open.kakao.com/me/jaeyunshop";
 
 }
