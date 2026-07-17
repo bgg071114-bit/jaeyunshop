@@ -170,8 +170,23 @@ function copyDiscordID(){
 
     setTimeout(()=>{
 
-        toast.classList.remove("show");
+        toast.classList.remove("show");toast
 
-    },3000);
+    },2000);
+
+}
+function showService(id, btn){
+
+    document.querySelectorAll(".price-box").forEach(box=>{
+        box.classList.remove("active");
+    });
+
+    document.querySelectorAll(".service-btn").forEach(button=>{
+        button.classList.remove("active");
+    });
+
+    document.getElementById(id).classList.add("active");
+
+    btn.classList.add("active");
 
 }

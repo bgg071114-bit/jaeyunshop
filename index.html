@@ -180,25 +180,25 @@ Premium Service
         <div class="feature-card reveal">
             <div class="icon">⚡</div>
             <h3>빠른 작업</h3>
-            <p>최대한 빠르게 진행하여 대기 시간을 줄여드립니다.</p>
+            <p>재윤샵은 최대한 빠르게 진행하여 고객님을 기달리게 하지 않습니다</p>
         </div>
 
         <div class="feature-card reveal">
             <div class="icon">🔒</div>
             <h3>안전한 진행</h3>
-            <p>안전한 방식으로 작업을 진행합니다.</p>
+            <p>재윤샵은 익명을 100% 보장하며 그 누구에게도 발설 하지 않겠습니다</p>
         </div>
 
         <div class="feature-card reveal">
             <div class="icon">💎</div>
             <h3>합리적인 가격</h3>
-            <p>부담 없는 가격으로 이용하실 수 있습니다.</p>
+            <p>재윤샵은 어느곳 보다 한 단계 착한 가격으로 맡이하겠습니다</p>
         </div>
 
         <div class="feature-card reveal">
             <div class="icon">⭐</div>
             <h3>친절한 상담</h3>
-            <p>궁금한 점은 언제든 문의해주세요.</p>
+            <p>24시간 언제든 편하게 문의주세요 찔러봐주셔도 괜찮습니다</p>
         </div>
 
     </div>
@@ -210,7 +210,7 @@ Premium Service
 
         <span>실제 데이터 기반으로 만들어진 표 입니다</span>
 
-        <h2>신뢰할 수 있는 서비스</h2>
+        <h2>재윤샵은 이런곳 입니다</h2>
 
     </div>
 
@@ -239,100 +239,202 @@ Premium Service
     </div>
 
 </section>
-<section class="pricing">
+<section class="service-select reveal">
 
     <div class="section-title">
+        <span>SERVICE</span>
+        <h2>어떤 서비스를 도와드릴까요?</h2>
+        <p>원하시는 서비스를 선택해주세요.</p>
+    </div>
 
-        <span>PRICE</span>
+    <div class="service-buttons">
 
-        <h2>서비스 가격표</h2>
+        <button class="service-btn active"
+        onclick="showService('mineral',this)">
+            💎 클랜 미네랄
+        </button>
 
-        <p>
-            투명한 가격으로 부담 없이 이용하세요.
-        </p>
+        <button class="service-btn"
+        onclick="showService('reboot',this)">
+            ⚡ 리부트 대리
+        </button>
+
+        <button class="service-btn"
+        onclick="showService('proxy',this)">
+            🎮 미네랄 대리
+        </button>
 
     </div>
 
-    <div class="price-grid">
 
-        <div class="price-card">
 
-            <h3>클랜 미네랄</h3>
+    <!-- ===================== -->
+    <!-- 클랜 미네랄 -->
+    <!-- ===================== -->
 
-            <div class="price">
+    <div class="price-box active" id="mineral">
 
-                100만당 <span>4,000원</span>
+        <div class="price-item">
+
+            <div class="price-left">
+
+                <h3>100만</h3>
+
+                <p>
+                    입금 후 기부할 클랜명을 알려주시면 대신 기부해드리는 서비스 클랜미네랄
+                </p>
 
             </div>
 
-            <ul>
-
-                <li>✦ 안전한 진행</li>
-                <li>✦ 빠른 작업</li>
-                <li>✦ 진행상황 안내</li>
-
-            </ul>
-
-            <a class="price-btn" href="javascript:void(0)" onclick="openContact()">
-    문의하기
-</a>
+            <strong>4,000원</strong>
 
         </div>
 
-        <div class="price-card best">
+        <div class="price-item">
 
-            <div class="best-badge">
-                BEST
-            </div>
+            <div class="price-left">
 
-            <h3>미네랄&경험치 대리</h3>
+                <h3>500만</h3>
 
-            <div class="price">
-
-                EVENT <span>할인중</span>
+                <p>
+                    입금 후 기부할 클랜명을 알려주시면 대신 기부해드리는 서비스 클랜미네랄
+                </p>
 
             </div>
 
-            <ul>
-
-                <li>✦ 10만 미네랄 / 0.14</li>
-                <li>✦ 100만 미네랄 / 1.3</li>
-                <li>✦ 500만 미네랄 / 6.3</li><br>
-                <li>✦ 10만 경험치 / 0.15</li>
-                <li>✦ 100만 경험치 / 1.5</li><br>
-
-                <li>✦ 500만 미네랄 이상 & 100만 이상 경험치 대리는 아직 준비중입니다
-            </ul>
-
-            <a class="price-btn" href="javascript:void(0)" onclick="openContact()">
-    문의하기
-</a>
+            <strong>20,000원</strong>
 
         </div>
 
-        <div class="price-card">
+        <div class="price-item">
 
-            <h3>리부트 대리</h3>
+            <div class="price-left">
 
-            <div class="price">
+                <h3>1000만</h3>
 
-                레벨 및 <span>티켓</span>
+                <p>
+                    1000만 클미는 모으는 시간 평균 1시간 내외 소요됩니다.
+                </p>
 
             </div>
 
-            <ul>
+            <strong>40,000원</strong>
 
-                <li>✦ 1 ~ 60 LV / 1.0 </li>
-                <li>✦ 60 ~ 80 LV / 2.5</li>
-                <li>✦ 각성&강화 티켓 / 100장 당 0.3</li><br><br>
+        </div>
 
-                 <li>70레벨 구간은 문의로 가격 상의</li>
+    </div>
 
-            </ul>
 
-            <a class="price-btn" href="javascript:void(0)" onclick="openContact()">
-    문의하기
-</a>
+
+    <!-- ===================== -->
+    <!-- 리부트 -->
+    <!-- ===================== -->
+
+    <div class="price-box" id="reboot">
+
+        <div class="price-item">
+
+            <div class="price-left">
+
+                <h3>1 ~ 60 LV</h3>
+
+                <p>
+                    리부트 직업 레벨을 대신 육성해드립니다
+                </p>
+
+            </div>
+
+            <strong>10,000원</strong>
+
+        </div>
+
+        <div class="price-item">
+
+            <div class="price-left">
+
+                <h3>60 ~ 80 LV</h3>
+
+                <p>
+                    고 레벨 육성을 대신 해드립니다
+                </p>
+
+            </div>
+
+            <strong>25,000원</strong>
+
+        </div>
+
+        <div class="price-item">
+
+            <div class="price-left">
+
+                <h3>강화 티켓</h3>
+
+                <p>
+                    기본무기 강화를 위한 강화티켓을 모아드립니다
+                </p>
+
+            </div>
+
+            <strong>100장당 3,000원</strong>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ===================== -->
+    <!-- 미네랄 대리 -->
+    <!-- ===================== -->
+
+    <div class="price-box" id="proxy">
+
+        <div class="price-item">
+
+            <div class="price-left">
+
+                <h3>10만</h3>
+
+                <p>
+                    리부트를 이용하여 미네랄을 모아드립니다
+                </p>
+
+            </div>
+
+            <strong>1,400원</strong>
+
+        </div>
+
+        <div class="price-item">
+
+            <div class="price-left">
+
+                <h3>100만</h3>
+
+                <p>
+                    핵 미작이 아닌 손 오직 손입니다
+                </p>
+
+            </div>
+
+            <strong>13,000원</strong>
+
+        </div>
+
+        <div class="price-item">
+
+            <div class="price-left">
+
+                <h3>500만</h3>
+
+                <p>
+                    문의
+                </p>
+
+            </div>
+
+            <strong>60,000원</strong>
 
         </div>
 
