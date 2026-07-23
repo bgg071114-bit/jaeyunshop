@@ -643,11 +643,10 @@ margin-bottom:15px;
 }
 
 .feature-card p{
-
-line-height:1.8;
-
-opacity:.75;
-
+    color:#5842c3; /* 진한 보라 */
+    font-size:15px;
+    font-weight:600;
+    line-height:1.7;
 }
 
 /* ============================= */
@@ -3315,5 +3314,605 @@ padding-right:env(safe-area-inset-right);
 padding-bottom:env(safe-area-inset-bottom);
 
 }
+
+}
+/* =======================================================
+   ZOMBIEGO GALAXY THEME
+=======================================================*/
+
+:root{
+    --main:#7b6cff;
+    --sub:#55c8ff;
+    --deep:#2d1b69;
+    --bg1:#08111f;
+    --bg2:#171b46;
+    --glass:rgba(255,255,255,.08);
+    --text:#ffffff;
+}
+
+/* 배경 */
+
+body{
+    color:var(--text);
+    background:
+    radial-gradient(circle at 20% 10%,rgba(115,120,255,.25),transparent 35%),
+    radial-gradient(circle at 80% 0%,rgba(0,220,255,.18),transparent 35%),
+    radial-gradient(circle at 70% 80%,rgba(180,80,255,.20),transparent 40%),
+    linear-gradient(180deg,#070b18,#101530,#171f48,#0b1023);
+}
+
+/* 별 */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image:
+    radial-gradient(#fff 1px,transparent 1px),
+    radial-gradient(#8fdcff 1px,transparent 1px),
+    radial-gradient(#c9b6ff 1px,transparent 1px);
+
+    background-size:
+    140px 140px,
+    220px 220px,
+    320px 320px;
+
+    opacity:.35;
+    animation:starsMove 120s linear infinite;
+}
+
+@keyframes starsMove{
+
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-500px);
+}
+
+}
+
+/* 오로라 */
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+left:-20%;
+top:-20%;
+
+width:140%;
+height:140%;
+
+pointer-events:none;
+
+background:
+
+radial-gradient(circle,#5d5dff55 0%,transparent 45%),
+radial-gradient(circle,#62d9ff33 0%,transparent 50%),
+radial-gradient(circle,#b865ff33 0%,transparent 55%);
+
+filter:blur(80px);
+
+animation:aurora 18s ease-in-out infinite alternate;
+
+}
+
+@keyframes aurora{
+
+0%{
+transform:translate(-3%,0) rotate(0deg);
+}
+
+100%{
+transform:translate(3%,2%) rotate(8deg);
+}
+
+}
+
+/* 헤더 */
+
+header{
+
+background:rgba(8,15,40,.45);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.logo{
+
+color:#fff;
+
+text-shadow:
+0 0 12px #7f7fff,
+0 0 28px #5ccfff;
+
+}
+
+nav a{
+
+color:#d8e7ff;
+
+}
+
+nav a:hover{
+
+color:#fff;
+
+text-shadow:0 0 12px #6bc7ff;
+
+}
+
+/* 카드 */
+
+.glass-card,
+.feature-card,
+.review-card,
+.stat-card,
+.price-box,
+.faq-item,
+.popup,
+.contact-popup{
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.12);
+
+box-shadow:
+
+0 15px 45px rgba(0,0,0,.35),
+
+0 0 40px rgba(100,170,255,.15);
+
+}
+
+/* 버튼 */
+
+.btn,
+.price-btn,
+.service-btn,
+.contact-item{
+
+background:linear-gradient(135deg,#6b6dff,#5fd8ff);
+
+color:#fff;
+
+border:none;
+
+box-shadow:0 10px 35px rgba(87,170,255,.35);
+
+transition:.35s;
+
+}
+
+.btn:hover,
+.price-btn:hover,
+.service-btn:hover,
+.contact-item:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+
+0 18px 45px rgba(96,210,255,.45),
+
+0 0 35px rgba(120,100,255,.45);
+
+}
+
+/* 활성 */
+
+.service-btn.active{
+
+background:linear-gradient(135deg,#6d67ff,#7ce7ff);
+
+}
+
+/* 숫자 */
+
+.counter{
+
+color:#8fdcff;
+
+text-shadow:
+
+0 0 12px #5bd8ff,
+
+0 0 25px #8f78ff;
+
+}
+
+/* 제목 */
+
+h1 span{
+
+background:linear-gradient(90deg,#82b7ff,#ffffff,#c78bff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.section-title span{
+
+color:#79d6ff;
+
+letter-spacing:2px;
+
+}
+
+.section-title h2{
+
+color:#fff;
+
+text-shadow:
+
+0 0 15px rgba(120,180,255,.45);
+
+}
+
+/* 가격 */
+
+.price-item{
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.price-item strong{
+
+color:#72d7ff;
+
+text-shadow:0 0 10px #59bfff;
+
+}
+
+/* FAQ */
+
+.faq-question{
+
+background:transparent;
+
+color:#fff;
+
+}
+
+.faq-answer{
+
+color:#dfe9ff;
+
+}
+
+/* Footer */
+
+footer{
+
+background:rgba(8,12,30,.7);
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer p,
+footer a{
+
+color:#dfe9ff;
+
+}
+
+/* 스크롤 */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(#6d7fff,#63d8ff);
+
+border-radius:50px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0d1126;
+
+}
+.feature-card h3{
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #8fdfff,
+        #ffffff,
+        #b896ff,
+        #ffffff
+    );
+
+    background-size:300% 100%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:galaxyText 5s linear infinite;
+}
+
+@keyframes galaxyText{
+
+0%{
+background-position:0% 50%;
+}
+
+100%{
+background-position:300% 50%;
+}
+
+}
+/* 은하고 버튼 */
+
+.service-btn.galaxy{
+
+position:relative;
+overflow:hidden;
+background:linear-gradient(135deg,#3b2c7f,#6e4cff,#5fd6ff);
+color:#fff;
+font-weight:700;
+border:1px solid rgba(255,255,255,.3);
+box-shadow:
+0 0 20px rgba(126,96,255,.45),
+0 0 45px rgba(95,214,255,.25);
+
+}
+
+.service-btn.galaxy::before{
+
+content:"";
+position:absolute;
+top:-120%;
+left:-40%;
+width:45%;
+height:320%;
+background:rgba(255,255,255,.45);
+transform:rotate(25deg);
+animation:shine 4s linear infinite;
+
+}
+
+@keyframes shine{
+
+0%{left:-60%;}
+100%{left:150%;}
+
+}
+
+.new-tag{
+
+position:absolute;
+top:8px;
+right:10px;
+font-size:10px;
+padding:2px 8px;
+border-radius:30px;
+background:#fff;
+color:#6f4dff;
+font-weight:800;
+
+}
+
+
+/* 은하고 상단 배너 */
+
+.galaxy-banner{
+
+background:
+linear-gradient(rgba(22,20,58,.85),rgba(22,20,58,.85)),
+url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+background-position:center;
+
+padding:45px;
+border-radius:24px;
+
+margin-bottom:35px;
+
+border:1px solid rgba(255,255,255,.12);
+
+box-shadow:
+0 0 40px rgba(116,96,255,.35);
+
+}
+
+.galaxy-banner h2{
+
+font-size:42px;
+color:#fff;
+margin-bottom:15px;
+
+text-shadow:
+0 0 20px #77d7ff,
+0 0 40px #7f5fff;
+
+}
+
+.galaxy-banner p{
+
+color:#d7d7ff;
+font-size:18px;
+margin-bottom:30px;
+
+}
+
+.galaxy-icons{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+
+}
+
+.galaxy-icons div{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+
+padding:18px;
+
+border-radius:18px;
+
+text-align:center;
+
+color:white;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.galaxy-icons div:hover{
+
+transform:translateY(-6px);
+background:rgba(122,92,255,.35);
+
+}
+.detail-item{
+
+margin-bottom:20px;
+
+border-radius:22px;
+
+background:rgba(255,255,255,.05);
+
+backdrop-filter:blur(18px);
+
+overflow:hidden;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.35s;
+
+}
+
+.detail-top{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:30px;
+
+cursor:pointer;
+
+}
+
+.detail-top h3{
+
+font-size:34px;
+
+color:#fff;
+
+}
+
+.detail-top p{
+
+margin-top:6px;
+
+color:#b8b6d8;
+
+}
+
+.detail-btn{
+
+font-size:20px;
+
+color:#6fdcff;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+.detail-content{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:.45s;
+
+padding:0 30px;
+
+}
+
+.detail-item.active .detail-content{
+
+max-height:350px;
+
+padding:25px 30px 30px;
+
+}
+
+.detail-content ul{
+
+margin-bottom:25px;
+
+}
+
+.detail-content li{
+
+margin:14px 0;
+
+color:white;
+
+font-size:17px;
+
+}
+
+.contact-detail-btn{
+
+width:100%;
+
+height:58px;
+
+border:none;
+
+border-radius:18px;
+
+font-size:19px;
+
+font-weight:700;
+
+cursor:pointer;
+
+background:linear-gradient(90deg,#6f5dff,#53d6ff);
+
+color:white;
+
+transition:.3s;
+
+}
+
+.contact-detail-btn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 0 30px rgba(116,93,255,.5);
 
 }

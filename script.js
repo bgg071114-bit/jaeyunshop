@@ -190,3 +190,37 @@ function showService(id, btn){
     btn.classList.add("active");
 
 }
+function showService(name){
+
+document.querySelectorAll(".price-box").forEach(box=>{
+box.classList.remove("active");
+});
+
+document.getElementById(name).classList.add("active");
+
+document.querySelectorAll(".service-btn").forEach(btn=>{
+btn.classList.remove("active");
+});
+
+event.target.classList.add("active");
+
+}
+function toggleDetail(el){
+
+const item=el.parentElement;
+
+const text=el.querySelector(".detail-btn");
+
+item.classList.toggle("active");
+
+if(item.classList.contains("active")){
+
+text.innerHTML="접기 ▲";
+
+}else{
+
+text.innerHTML="자세히 보기 ▾";
+
+}
+
+}
