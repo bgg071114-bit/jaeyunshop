@@ -224,3 +224,18 @@ text.innerHTML="자세히 보기 ▾";
 }
 
 }
+/* true = 영업중
+   false = 영업종료 */
+const SHOP_OPEN = false;
+
+window.addEventListener("load",()=>{
+
+    if(!SHOP_OPEN){
+        document.getElementById("closedPopup").style.display="flex";
+    }
+
+});
+
+function closeClosedPopup(){
+    document.getElementById("closedPopup").style.display="none";
+}
