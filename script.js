@@ -226,7 +226,7 @@ text.innerHTML="자세히 보기 ▾";
 }
 /* true = 영업중
    false = 영업종료 */
-const SHOP_OPEN = false;
+const SHOP_OPEN = true;
 
 window.addEventListener("load",()=>{
 
